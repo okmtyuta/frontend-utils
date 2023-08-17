@@ -1,0 +1,17 @@
+.list {
+
+  list-style: none;
+}
+
+.indent {
+  margin: 0 24px;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.item-indent li {
+  padding-left: 1.5em;
+  text-indent: -1.3em;
+}

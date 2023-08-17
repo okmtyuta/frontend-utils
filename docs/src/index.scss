@@ -1,0 +1,6 @@
+@use '../../css/font.scss' as font;
+@import '../../css/default.scss';
+body {
+  list-style: none;
+  font-family: font.$noto-sans;
+}

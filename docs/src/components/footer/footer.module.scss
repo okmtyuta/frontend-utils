@@ -1,0 +1,40 @@
+@use '../../../../css/color.scss' as color;
+@use '../../../../css/font.scss' as font;
+
+.footer-main {
+  display: grid;
+  grid-template:
+    'menu' auto
+    'copyright' auto
+    / auto;
+  max-width: 860px;
+  margin: 12px auto;
+  padding: 16px;
+}
+.footer {
+  border-top: solid 1px color.$suoh-lighten;
+}
+
+.footer-menu {
+  grid-area: menu;
+  display: flex;
+  gap: 64px;
+}
+
+.footer-logo {
+  grid-area: logo;
+}
+
+.copyright {
+  grid-area: copyright;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  align-items: center;
+}
+
+.designed-by {
+  font-family: font.$anton;
+  color: color.$suoh;
+}

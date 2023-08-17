@@ -1,0 +1,53 @@
+@use '../../../../css/mixin/mq.scss' as mq;
+@use '../../../../css/color.scss' as color;
+
+.frame {
+  @include mq.mq(pc) {
+    display: grid;
+    grid-template:
+      'header header' auto
+      'menu main' 1fr
+      'footer footer' auto
+      / 3fr 7fr;
+    margin: 0px 96px 48px 96px;
+  }
+  @include mq.mq(sp) {
+    margin: 12px 24px;
+  }
+  @include mq.mq(tab) {
+    margin: 12px 24px;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  grid-area: header;
+  background-color: white;
+  border-bottom: solid 1px color.$suoh-lighten;
+  margin-bottom: 12px;
+}
+.footer {
+  border-top: solid 1px color.$suoh-lighten;
+  grid-area: footer;
+}
+
+.menu {
+  position: sticky;
+  top: 85px;
+  align-self: start;
+  grid-area: menu;
+  margin-right: 32px;
+}
+.main {
+  grid-area: main;
+}
+.hide {
+  @include mq.mq(sp) {
+    display: none;
+  }
+  @include mq.mq(tab) {
+    display: none;
+  }
+}
